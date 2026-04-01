@@ -1,12 +1,9 @@
-"use client";
+"use client"
+import { VishlexProvider } from "vishlex/next"
 
-import { VishlexProvider } from "vishlex/next";
+export default function VishlexWrapper({ children }: { children: React.ReactNode }) {
+  console.log("COLLECT URL:", process.env.NEXT_PUBLIC_COLLECT_URL)
 
-export default function VishlexWrapper({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
   return (
     <VishlexProvider
       trackingId="cmncytit40003i1l4sw9cqfh4"
@@ -14,5 +11,5 @@ export default function VishlexWrapper({
     >
       {children}
     </VishlexProvider>
-  );
+  )
 }
