@@ -6,7 +6,7 @@ export default function VishlexWrapper({ children }: { children: React.ReactNode
 
   return (
     <VishlexProvider
-      trackingId="cmncytit40003i1l4sw9cqfh4"
+      trackingId={process.env.VISHLEX_API_KEY!}
       collectUrl={process.env.NEXT_PUBLIC_COLLECT_URL!}
     >
       {children}
